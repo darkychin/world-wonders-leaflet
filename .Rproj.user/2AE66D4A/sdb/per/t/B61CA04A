@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"World Wonders and Visits\"\nauthor: \"Darky\"\ndate: \"January 23, 2020\"\noutput: html_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n## Description\nPopular world wonders I like and its average number of visits every month as weight.\n\n### Prepare Data\n```{r}\nname <- c(\"Chichén Itzá\",\"Petra\",\"Collosus\",\"Colloseum\",\"\")\nlongitude <- c()\nlatitude <-c()\nvisits <- c()\nwonders <- data.frame(name = name)\nlibrary(leaflet)\n\n```\n\n### Prepare Icon\n```{r cache=TRUE}\n\n```\n\n### Draw Map\n```{r cache=TRUE}\n\n```\n\n### Fun Fact\nI learnt these wonders from CIV 6.",
+    "created" : 1579793178271.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2520978165",
+    "id" : "B61CA04A",
+    "lastKnownWriteTime" : 1579794586,
+    "last_content_update" : 1579794586469,
+    "path" : "~/Darky_stuffs/GitHub/world-wonders-leaflet/world-wonders.Rmd",
+    "project_path" : "world-wonders.Rmd",
+    "properties" : {
+        "last_setup_crc32" : "6300F73Fbb338d19",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

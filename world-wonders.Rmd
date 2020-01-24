@@ -1,0 +1,37 @@
+---
+title: "World Wonders and Visits"
+author: "Darky"
+date: "January 23, 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Description
+Popular world wonders I like and its average number of visits every month as weight.
+
+### Prepare Data
+```{r}
+name <- c("Chichén Itzá","Petra","Collosus","Colloseum","")
+longitude <- c()
+latitude <-c()
+visits <- c()
+wonders <- data.frame(name = name)
+library(leaflet)
+
+```
+
+### Prepare Icon
+```{r cache=TRUE}
+
+```
+
+### Draw Map
+```{r cache=TRUE}
+
+```
+
+### Fun Fact
+I learnt these wonders from CIV 6.
