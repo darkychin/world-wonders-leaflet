@@ -1,0 +1,4 @@
+"0","name <- c(""Alhambra"",""Chichén Itzá"",""Colosseum"",""Great Pyramid of Giza"",""Niagara Falls"",""Petra"",""Stonehenge"")"
+"0","latitude <-c(37.17695,,,,,,)"
+"2","Error in c(37.17695, , , , , , ) : argument 2 is empty
+"

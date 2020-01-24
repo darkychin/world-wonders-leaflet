@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "---\ntitle: \"World Wonders and Visits\"\nauthor: \"Darky\"\ndate: \"January 23, 2020\"\noutput: html_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n## Description\nPopular world wonders I like and its average number of visits every month as weight.\n\n### Prepare Data\n```{r}\nname <- c(\"Chichén Itzá\",\"Petra\",\"Collosus\",\"Colloseum\",\"\")\nlongitude <- c()\nlatitude <-c()\nvisits <- c()\nwonders <- data.frame(name = name)\nlibrary(leaflet)\n\n```\n\n### Prepare Icon\n```{r cache=TRUE}\n\n```\n\n### Draw Map\n```{r cache=TRUE}\n\n```\n\n### Fun Fact\nI learnt these wonders from CIV 6.",
+    "contents" : "---\ntitle: \"World Wonders and Visits\"\nauthor: \"Darky\"\ndate: \"January 23, 2020\"\noutput: html_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n## Description\nPopular world wonders I like and its estimated annual number of visits as weight.\n\n### Prepare Data\n```{r}\nname <- c(\"Alhambra\",\"Chichén Itzá\",\"Colosseum\",\"Great Pyramid of Giza\",\"Niagara Falls\",\"Petra\",\"Stonehenge\")\nlatitude <-c(37.17695,,,29.979167,,30.328611,51.178889)\nlongitude <- c(-3.59001,,,31.134167,,35.441944,-1.826111)\nvisits <- c(2000000,,,8200000,,,1000000,800000)\n\nwonders <- data.frame(name = name,\n                      latitude = latitude,\n                      longitude = longitude,\n                      visits = visits)\nlibrary(leaflet)\n\n```\n\n### Prepare Icon\n```{r cache=TRUE}\n\n```\n\n### Draw Map\n```{r cache=TRUE}\n\n```\n\n### Fun Fact\nI learnt these wonders from CIV 6.",
     "created" : 1579793178271.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2520978165",
+    "hash" : "1890876428",
     "id" : "B61CA04A",
-    "lastKnownWriteTime" : 1579794586,
-    "last_content_update" : 1579794586469,
+    "lastKnownWriteTime" : 1579852869,
+    "last_content_update" : 1579852869431,
     "path" : "~/Darky_stuffs/GitHub/world-wonders-leaflet/world-wonders.Rmd",
     "project_path" : "world-wonders.Rmd",
     "properties" : {

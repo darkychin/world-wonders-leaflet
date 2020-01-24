@@ -10,15 +10,19 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Description
-Popular world wonders I like and its average number of visits every month as weight.
+Popular world wonders I like and its estimated annual number of visits as weight.
 
 ### Prepare Data
 ```{r}
-name <- c("Chichén Itzá","Petra","Collosus","Colloseum","")
-longitude <- c()
-latitude <-c()
-visits <- c()
-wonders <- data.frame(name = name)
+name <- c("Alhambra","Chichén Itzá","Colosseum","Great Pyramid of Giza","Niagara Falls","Petra","Stonehenge")
+latitude <-c(37.17695,,,29.979167,,30.328611,51.178889)
+longitude <- c(-3.59001,,,31.134167,,35.441944,-1.826111)
+visits <- c(2000000,,,8200000,,,1000000,800000)
+
+wonders <- data.frame(name = name,
+                      latitude = latitude,
+                      longitude = longitude,
+                      visits = visits)
 library(leaflet)
 
 ```
