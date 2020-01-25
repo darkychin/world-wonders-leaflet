@@ -1,40 +1,53 @@
 ---
-title: "World Wonders and Visits"
+title: "World Wonders and Annual Visits"
 author: "Darky"
 date: "January 23, 2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## Description
-Popular world wonders I like and its estimated annual number of visits as weight.
+Popular world wonders I like and its estimated annual visits as weight.
 
 ### Prepare Data
 ```{r}
-name <- c("Alhambra","Chichén Itzá","Colosseum","Great Pyramid of Giza","Niagara Falls","Petra","Stonehenge")
-latitude <-c(37.17695,,,29.979167,,30.328611,51.178889)
-longitude <- c(-3.59001,,,31.134167,,35.441944,-1.826111)
-visits <- c(2000000,,,8200000,,,1000000,800000)
+name <- c("<a href='https://en.wikipedia.org/wiki/Alhambra'>Alhambra</a><br>",
+          "<a href='https://en.wikipedia.org/wiki/Chichen_Itza'>Chichén Itzá</a>",
+          "<a href='https://en.wikipedia.org/wiki/Colosseum'>Colosseum</a>",
+          "<a href='https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza'>Great Pyramid of Giza</a>",
+          "<a href='https://en.wikipedia.org/wiki/Niagara_Falls'>Niagara Falls</a>",
+          "<a href='https://en.wikipedia.org/wiki/Petra'>Petra</a>",
+          "<a href='https://en.wikipedia.org/wiki/Stonehenge'>Stonehenge</a>")
+latitude <-c(37.17695,20.683056,41.8902,29.979167,43.0799,30.328611,51.178889)
+longitude <- c(-3.59001,-88.568611,12.4924,31.134167,79.0747,35.441944,-1.826111)
+visits <- c(2000000,2600000,4000000,14700000,14000000,1000000,800000)
 
 wonders <- data.frame(name = name,
                       latitude = latitude,
                       longitude = longitude,
                       visits = visits)
-library(leaflet)
-
-```
-
-### Prepare Icon
-```{r cache=TRUE}
-
 ```
 
 ### Draw Map
-```{r cache=TRUE}
-
+```{r cache=TRUE, warning=FALSE, message=FALSE}
+library(leaflet)
+pal <- colorNumeric("RdBu",wonders$visits)
+map <- wonders %>%
+    leaflet() %>%
+    addTiles() %>%
+    addMarkers(popup=paste("Wonder: ",name,"<br>",
+                           "Annual Visits: ",format(visits, scientific = FALSE))) %>%
+    addCircles(weight = 5, 
+               radius = wonders$visits/5,
+               color = ~pal(visits)) %>%
+    addLegend(position = "bottomright",
+              title = "Number of Visits",
+              pal = pal,
+              values = wonders$visits) %>%
+    setView(lat = (max(latitude)+min(latitude))/2 - 25 ,
+            lng = (max(longitude)+min(longitude))/2,
+            zoom = 2)
+map
 ```
 
 ### Fun Fact
