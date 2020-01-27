@@ -19,7 +19,7 @@ name <- c("<a href='https://en.wikipedia.org/wiki/Alhambra'>Alhambra</a><br>",
           "<a href='https://en.wikipedia.org/wiki/Petra'>Petra</a>",
           "<a href='https://en.wikipedia.org/wiki/Stonehenge'>Stonehenge</a>")
 latitude <-c(37.17695,20.683056,41.8902,29.979167,43.0799,30.328611,51.178889)
-longitude <- c(-3.59001,-88.568611,12.4924,31.134167,79.0747,35.441944,-1.826111)
+longitude <- c(-3.59001,-88.568611,12.4924,31.134167,-79.0747,35.441944,-1.826111)
 visits <- c(2000000,2600000,4000000,14700000,14000000,1000000,800000)
 
 wonders <- data.frame(name = name,
@@ -29,7 +29,7 @@ wonders <- data.frame(name = name,
 ```
 
 ### Draw Map
-```{r cache=TRUE, warning=FALSE, message=FALSE}
+```{r warning=FALSE, message=FALSE}
 library(leaflet)
 pal <- colorNumeric("RdBu",wonders$visits)
 map <- wonders %>%
